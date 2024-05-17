@@ -6,7 +6,7 @@
 </head>
 
 <body id="container-page-index">
-    <?php include './inc/navbar.php'; ?>
+    <?php include 'C:\xampp\htdocs\pda\navegbar.php'; ?>
     
     <section id="slider-store" class="carousel slide" data-ride="carousel" style="padding: 0;">
 
@@ -58,8 +58,7 @@
             </div>
             <div class="row">
               	<?php
-                  include 'library/configServer.php';
-                  include 'library/consulSQL.php';
+                  include 'library/ConsultasSql.php';
                   $consulta= ejecutarSQL::consultar("SELECT * FROM producto WHERE Stock > 0 AND Estado='Activo' ORDER BY id DESC LIMIT 7");
                   $totalproductos = mysqli_num_rows($consulta);
                   if($totalproductos>0){
