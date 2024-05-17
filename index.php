@@ -6,7 +6,7 @@
 </head>
 
 <body id="container-page-index">
-    <?php include 'C:\xampp\htdocs\pda\navegbar.php'; ?>
+    <?php include 'C:\xampp\htdocs\pda\navbar.php'; ?>
     
     <section id="slider-store" class="carousel slide" data-ride="carousel" style="padding: 0;">
 
