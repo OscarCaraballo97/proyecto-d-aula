@@ -1,11 +1,10 @@
 /* ========================================= General styles ======================================*/
 @font-face {
     font-family: 'FontFamilyLogo';
-    src: url('../fonts/goodtime-webfont.woff2') format('woff2'),
-         url('../fonts/goodtime-webfont.woff') format('woff'),
-         url('../fonts/goodtime-webfont.ttf') format('truetype'),
-         url('../fonts/goodtime-webfont.svg') format('svg');
-    font-weight: normal;
+    src: url('C:\xampp\htdocs\pda\css\fonts\fontawesome-webfont.woff2') format('woff2'),
+    url('C:\xampp\htdocs\pda\css\fonts\fontawesome-webfont.woff') format('woff'),
+    url('C:\xampp\htdocs\pda\css\fonts\goodtime-webfont.ttf') format('truetype'),
+    url('C:\xampp\htdocs\pda\css\fonts\sourcesanspro-regular-webfont.svg') format('svg');
     font-style: normal;
 }
 @font-face {
