@@ -22,7 +22,7 @@ class ejecutar {
     }  
 }
 /* Clase para hacer las consultas Insertar, Eliminar y Actualizar */
-class consultas{
+class consultasSQL{
     public static function InsertSQL($tabla, $campos, $valores) {
         if (!$consul = ejecutar::consultar("INSERT INTO $tabla ($campos) VALUES($valores)")) {
             die("Ha ocurrido un error al insertar los datos en la tabla");
