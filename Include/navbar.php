@@ -106,7 +106,7 @@
         <br><br>
         <ul class="list-unstyled text-center">
             <li><a href="C:\xampp\htdocs\pda\principal\index.php">Inicio</a></li>
-            <li><a href="product.php">Productos</a></li>
+            <li><a href="productos.php">Productos</a></li>
             <li><a href="carrito.php">Carrito</a></li>
             <?php 
                 if(!$_SESSION['nombreAdmin']==""){
