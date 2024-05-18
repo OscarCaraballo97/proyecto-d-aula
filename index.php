@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <title>Inicio</title>
-    <?php include 'C:\xampp\htdocs\pda\Include\links.php'; ?>
+    <?php include 'C:\xampp\htdocs\pda\Include\links.html'; ?>
 </head>
 
 <body id="container-page-index">
