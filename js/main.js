@@ -25,14 +25,14 @@ $(document).ready(function() {
         e.preventDefault();
         swal({
             title: "¿Quieres salir del sistema?",   
-            text: "Estas seguro que quieres cerrar la sesión actual y salir del sistema",   
+            text: "Estas seguro que quieres cerrar la sesión actual?",   
             type: "warning",   
             showCancelButton: true,   
             confirmButtonColor: "#16a085",   
             confirmButtonText: "Si, salir",
             cancelButtonText: "No, cancelar",
             closeOnConfirm: false,
-            animation: "slide-from-top"
+            animation: "slide"
         }, function(){
             window.location='process/logout.php';
         });

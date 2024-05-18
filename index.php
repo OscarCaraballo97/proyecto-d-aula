@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <title>Inicio</title>
-    <?php include './inc/link.php'; ?>
+    <?php include './include/links.php'; ?>
 </head>
 
 <body id="container-page-index">
@@ -20,7 +20,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="./imagenes/img/slider1.jpg" alt="slider1">
+                <img src="./imagenes/img/imagen1.jpg" alt="slider1">
                 <div class="carousel-caption">
                     imagen1
                 </div>
