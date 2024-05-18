@@ -105,7 +105,7 @@
         </button>
         <br><br>
         <ul class="list-unstyled text-center">
-            <li><a href="index.php">Inicio</a></li>
+            <li><a href="C:\xampp\htdocs\pda\principal\index.php">Inicio</a></li>
             <li><a href="product.php">Productos</a></li>
             <li><a href="carrito.php">Carrito</a></li>
             <?php 

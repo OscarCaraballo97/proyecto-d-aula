@@ -2,19 +2,19 @@
 <html lang="es">
 <head>
     <title>Inicio</title>
-    <?php include './include/links.php'; ?>
+    <?php include 'C:\xampp\htdocs\pda\Include\links.php'; ?>
 </head>
 
 <body id="container-page-index">
-    <?php include 'C:\xampp\htdocs\pda\navbar.php'; ?>
+    <?php include 'C:\xampp\htdocs\pda\include\navbar.php'; ?>
     
     <section id="slider-store" class="carousel slide" data-ride="carousel" style="padding: 0;">
 
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#slider-store" data-slide-to="0" class="active"></li>
-            <li data-target="#slider-store" data-slide-to="1"></li>
-            <li data-target="#slider-store" data-slide-to="2"></li>
+            <li data-target="#slider-E-market" data-slide-to="0" class="active"></li>
+            <li data-target="#slider-E-market" data-slide-to="1"></li>
+            <li data-target="#slider-E-market" data-slide-to="2"></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -58,7 +58,7 @@
             </div>
             <div class="row">
               	<?php
-                  include 'library/ConsultasSql.php';
+                  include 'library/Consultas/ConsultasSql.php';
                   $consulta= ejecutarSQL::consultar("SELECT * FROM producto WHERE Stock > 0 AND Estado='Activo' ORDER BY id DESC LIMIT 7");
                   $totalproductos = mysqli_num_rows($consulta);
                   if($totalproductos>0){
