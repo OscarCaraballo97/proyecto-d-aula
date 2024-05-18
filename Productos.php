@@ -176,7 +176,7 @@ include './Consultas/consultasSql.php';
       ?>
     </div>
   </section>
-  <?php include './inc/footer.php'; ?>
+  <?php include './include/piedepagina.html'; ?>
 </body>
 
 </html>

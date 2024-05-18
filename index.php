@@ -95,5 +95,6 @@
             </div>
          </div>
     </section>
+    <?php include './include/piedepagina.html'; ?>
 </body>
 </html>
