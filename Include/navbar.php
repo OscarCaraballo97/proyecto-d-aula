@@ -47,6 +47,32 @@
               </div>
             </div>
         </div>
+        <div class="row visible-xs"><!-- Mobile menu navbar -->
+            <div class="col-xs-12">
+                <button class="btn btn-default pull-left button-mobile-menu" id="btn-mobile-menu">
+                    <i class="fa fa-th-list"></i>&nbsp;&nbsp;Menú
+                </button>
+               
+                <?php
+                if(!$_SESSION['nombreAdmin']==""){echo '
+                    <a href="#"  id="button-login-xs" class="elements-nav-xs exit-system">
+                        <i class="fa fa-user"></i>&nbsp; '.$_SESSION['nombreAdmin'].' 
+                    </a>';
+                }else if(!$_SESSION['nombreUser']==""){
+                    echo '
+                    <a href="#"  id="button-login-xs" class="elements-nav-xs exit-system">
+                        <i class="fa fa-user"></i>&nbsp; '.$_SESSION['nombreUser'].' 
+                    </a>';
+                }else{
+                    echo '
+                       <a href="#" data-toggle="modal" data-target=".modal-login" id="button-login-xs" class="elements-nav-xs">
+                        <i class="fa fa-user"></i>&nbsp; Iniciar Sesión
+                        </a> 
+                   ';
+                }
+                ?>
+            </div>
+        </div>
 
     </nav>
    
