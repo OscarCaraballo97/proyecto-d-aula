@@ -11,7 +11,7 @@
               <div class="contenedor-tabla pull-right">
                 <div class="contenedor-tr">
                   <a href="index.php" class="table-cell-td">Inicio</a>
-                  <a href="product.php" class="table-cell-td">Productos</a>
+                  <a href="productos.php" class="table-cell-td">Productos</a>
                   <?php
                       if(!$_SESSION['nombreAdmin']==""){
                           echo ' 
@@ -117,7 +117,7 @@
                     <li><a href="#" class="glyphicon glyphicon-cog userConBtn" data-code="'.$_SESSION['UserNIT'].'"> Configuraciones</a></li>
                     ';
                 }else{
-                    echo '<li><a href="registration.php">Registro</a></li>';
+                    echo '<li><a href="registro.php">Registro</a></li>';
                 }
             ?>
         </ul>
