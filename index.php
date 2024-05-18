@@ -8,16 +8,16 @@
 <body id="container-page-index">
     <?php include 'C:\xampp\htdocs\pda\include\navbar.php'; ?>
     
-    <section id="slider-store" class="carousel slide" data-ride="carousel" style="padding: 0;">
+    <section id="slider-E-market" class="carousel slide" data-ride="carousel" style="padding: 0;">
 
-        <!-- Indicators -->
+        <!-- Indicadores -->
         <ol class="carousel-indicators">
             <li data-target="#slider-E-market" data-slide-to="0" class="active"></li>
             <li data-target="#slider-E-market" data-slide-to="1"></li>
             <li data-target="#slider-E-market" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
+        <!-- Sliders -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="./imagenes/img/imagen1.jpg" alt="slider1">
@@ -39,12 +39,12 @@
             </div>
         </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#slider-store" role="button" data-slide="prev">
+        <!-- Controles -->
+        <a class="left carousel-control" href="#slider-E-market" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Anterior</span>
         </a>
-        <a class="right carousel-control" href="#slider-store" role="button" data-slide="next">
+        <a class="right carousel-control" href="#slider-E-market" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Siguiente</span>
         </a>

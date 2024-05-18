@@ -1,7 +1,7 @@
 /* ========================================= General styles ======================================*/
 @font-face {
     font-family: 'FontFamilyLogo';
-    src: url('C:\xampp\htdocs\css\fonts\fontawesome-webfont.woff2') format('woff2'),
+    src: url('C:\xampp\htdocs\pda\fonts\fontawesome-webfont.woff2') format('woff2'),
     url('C:\xampp\htdocs\pda\fonts\fontawesome-webfont.woff') format('woff'),
     url('C:\xampp\htdocs\pda\fonts\goodtime-webfont.ttf') format('truetype'),
     url('C:\xampp\htdocs\pda\fonts\sourcesanspro-regular-webfont.svg') format('svg');
@@ -91,14 +91,23 @@ article{
 footer{
     width: 100%;
     color: #fff;
-    background-color: #333;
+    background-color: #000000;
     padding: 40px 0px;
 }
 .text-footer{
-    color: #5bc0de;
+    color: #ffffff;
 }
 footer a{
-    color: #fff;
+    color: #ffffff;
+    background-color: #000000;
+}
+  
+footer a:hover{
+        color: #ffffff;
+        background-color: #000000;
+        }
+        footer a:visited{
+            color: #d60000;
 }
 .tittles-pages-logo{
     font-family: "FontFamilyLogo";
