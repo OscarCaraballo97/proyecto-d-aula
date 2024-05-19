@@ -3,11 +3,11 @@
 
 <head>
   <title>Registro</title>
-  <?php include './inc/link.php'; ?>
+  <?php include './include/links.html'; ?>
 </head>
 
 <body id="container-page-registration">
-  <?php include './inc/navbar.php'; ?>
+  <?php include './include/navbar.php'; ?>
   <section id="form-registration">
     <div class="container">
       <div class="page-header">
