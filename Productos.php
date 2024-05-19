@@ -33,7 +33,7 @@ include './Consultas/consultasSql.php';
                   <?php
                   while ($cate = mysqli_fetch_array($checkAllCat, MYSQLI_ASSOC)) {
                     echo '
-                                <li><a href="product.php?categ=' . $cate['CodigoCat'] . '">' . $cate['Nombre'] . '</a></li>
+                                <li><a href="productos.php?categ=' . $cate['CodigoCat'] . '">' . $cate['Nombre'] . '</a></li>
                                 <li role="separator" class="divider"></li>
                               ';
                   }
@@ -126,7 +126,7 @@ include './Consultas/consultasSql.php';
                       </li>
                     <?php else : ?>
                       <li>
-                        <a href="product.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina - 1; ?>">
+                        <a href="productos.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina - 1; ?>">
                           <span aria-hidden="true">&laquo;</span>
                         </a>
                       </li>
@@ -136,9 +136,9 @@ include './Consultas/consultasSql.php';
                     <?php
                     for ($i = 1; $i <= $numeropaginas; $i++) {
                       if ($pagina == $i) {
-                        echo '<li class="active"><a href="product.php?categ=' . $categoria . '&pag=' . $i . '">' . $i . '</a></li>';
+                        echo '<li class="active"><a href="productos.php?categ=' . $categoria . '&pag=' . $i . '">' . $i . '</a></li>';
                       } else {
-                        echo '<li><a href="product.php?categ=' . $categoria . '&pag=' . $i . '">' . $i . '</a></li>';
+                        echo '<li><a href="productos.php?categ=' . $categoria . '&pag=' . $i . '">' . $i . '</a></li>';
                       }
                     }
                     ?>

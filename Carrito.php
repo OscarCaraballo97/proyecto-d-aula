@@ -49,7 +49,7 @@
                         echo '
                             <p class="text-center">
                             <a href="productos.php" class="btn btn-primary btn-raised btn-lg">Seguir comprando</a>
-                            <a href="procesos/vaciarcarrito.php" class="btn btn-success btn-raised btn-lg">Vaciar el carrito</a>
+                            <a href="process/vaciarcarrito.php" class="btn btn-success btn-raised btn-lg">Vaciar el carrito</a>
                             <a href="pedido.php" class="btn btn-danger btn-raised btn-lg">Confirmar el pedido</a>
                             </p>
                             ';

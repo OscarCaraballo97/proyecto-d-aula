@@ -36,7 +36,7 @@
                       }else{
                           echo ' 
 
-                          <a href="registration.php" class="table-cell-td">Registro</a>
+                          <a href="registro.php" class="table-cell-td">Registro</a>
                               <a href="#" class="table-cell-td" data-toggle="modal" data-target=".modal-login">
                                   <i class="fa fa-user"></i>&nbsp;&nbsp;Login
                               </a>
@@ -75,6 +75,7 @@
         </div>
 
     </nav>
+    
    
     <div class="modal fade modal-login" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
@@ -131,7 +132,7 @@
         </button>
         <br><br>
         <ul class="list-unstyled text-center">
-            <li><a href="C:\xampp\htdocs\pda\principal\index.php">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="productos.php">Productos</a></li>
             <li><a href="carrito.php">Carrito</a></li>
             <?php 
@@ -151,7 +152,7 @@
     <?php if(isset($_SESSION['nombreUser'])): ?>
     <div class="modal fade" id="ModalUpUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
-        <form class="modal-content FormCatElec" action="process/updateClient.php" method="POST" data-form="save" autocomplete="off">
+        <form class="modal-content FormCatElec" action="procesos/updateClient.php" method="POST" data-form="save" autocomplete="off">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel">Configuraciones</h4>
