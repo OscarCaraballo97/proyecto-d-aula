@@ -33,9 +33,9 @@
                                                 <td> " . $codeProd['cantidad'] . "</td>
                                                 <td> " . $pref * $codeProd['cantidad'] . "</td>
                                                 <td>
-                                                    <form action='process/quitarproducto.php' method='POST' class='FormCatElec' data-form=''>
+                                                    <form action='.\process\quitarproducto.php' method='POST' class='FormCatElec' data-form=''>
                                                         <input type='hidden' value='" . $codeProd['producto'] . "' name='codigo'>
-                                                        <button class='btn btn-danger btn-raised btn-xs'>Eliminar</button>
+                                                        <button class='btn btn-danger btn-raised btn-xs'>Eliminar producto</button>
                                                     </form>
                                                 </td>
                                             </tr>
