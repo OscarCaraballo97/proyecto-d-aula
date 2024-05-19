@@ -21,19 +21,55 @@
                 ?>
                       <br><br><br>
                       <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-xs-10 col-xs-offset-1">
-                            <p class="text-center lead">Selecciona un metodo de pago</p>
-                            <img class="img-responsive center-all-contens" src="./imagenes/img/credit-card.png">
-                            <p class="text-center">
-                              <button class="btn btn-lg btn-raised btn-success btn-block" data-toggle="modal" data-target="#PagoModalTran">Transaccion Bancaria</button>
-                            </p>
-                            <p class="text-center">
-                              <button class="btn btn-lg btn-raised btn-success btn-block" data-toggle="modal" data-target="#PagoModalTran">Pago en Contra Entrega</button>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      <?php
+session_start(); 
+include '../Consultas/consultasSql.php';
+
+$suma = 0;
+if(!empty($_SESSION['carro'])){
+    foreach($_SESSION['carro'] as $codess){
+        $consulta = ejecutar::consultar("SELECT * FROM producto WHERE CodigoProd='".$codess['producto']."'");
+        while($fila = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
+            $tp = number_format($fila['Precio'] - ($fila['Precio'] * ($fila['Descuento'] / 100)), 2, '.', '');
+            $suma += $tp * $codess['cantidad'];
+        }
+        mysqli_free_result($consulta);
+    }
+} else {
+    $suma = 0;
+}
+?>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <p class="text-center lead">Selecciona un método de pago</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Método de Pago</th>
+                        <th class="text-center">Valor a Pagar</th>
+                        <th class="text-center">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <p>Transacción Bancaria</p>
+                            <img class="img-responsive center-all-contens" src="./imagenes/img/credit-card (3).png" alt="Credit Card">
+                        </td>
+                        <td class="text-center">
+                            <?php echo '$'.number_format($suma, 2); ?>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-lg btn-raised btn-success" data-toggle="modal" data-target="#PagoModalTran">Seleccionar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
                 <?php
                     }else{
                       echo '<p class="text-center lead">No tienes pedidos pendientes de pago</p>';
@@ -88,6 +124,9 @@
                                                 case 'Entregado':
                                                   echo "Entregado";
                                                   break;
+                                                case 'Cancelado':
+                                                    echo "Cancelado";
+                                                    break;
                                                 default:
                                                   echo "Sin informacion";
                                                   break;

@@ -152,7 +152,7 @@ include './Consultas/consultasSql.php';
                       </li>
                     <?php else : ?>
                       <li>
-                        <a href="product.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina + 1; ?>">
+                        <a href="productos.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina + 1; ?>">
                           <span aria-hidden="true">&raquo;</span>
                         </a>
                       </li>

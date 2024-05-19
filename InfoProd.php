@@ -53,7 +53,7 @@ include './Consultas/consultasSql.php';
                                     $imagenFile="./imagenes/img-products/default.png"; 
                                 }
                                 echo '<br>
-                                <a href="product.php" class="btn btn-lg btn-primary btn-raised btn-block"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;Regresar a la tienda</a>
+                                <a href="productos.php" class="btn btn-lg btn-primary btn-raised btn-block"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;Regresar a la tienda</a>
                             </div>
 
 
