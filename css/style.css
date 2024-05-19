@@ -35,7 +35,7 @@ nav{
     position: fixed;
     top: 0px;
     background-color: #800000;
-    box-shadow: 2px 0px 7px #626262;
+    box-shadow: 2px 0px 7px #ffffff;
 	z-index: 50;
 }
 .contenedor-tabla{
@@ -51,7 +51,7 @@ nav{
 	color: #fff;
 }
 .contenedor-tr > a:hover{
-	background-color: rgba(255, 255, 255,.1);
+	background-color: rgba(255, 255, 255, 0.1);
     transition: background-color .4s ease-in;
 }
 .contenedor-tr > a:last-child{

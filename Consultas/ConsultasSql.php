@@ -44,19 +44,12 @@ class consultas{
     public static function clean_string($val){
         $val=trim($val);
         $val=stripslashes($val);
-        $val=str_ireplace("<script>", "", $val);
-        $val=str_ireplace("</script>", "", $val);
-        $val=str_ireplace("<script src", "", $val);
-        $val=str_ireplace("<script type=", "", $val);
         $val=str_ireplace("SELECT * FROM", "", $val);
         $val=str_ireplace("DELETE FROM", "", $val);
         $val=str_ireplace("INSERT INTO", "", $val);
+      
         $val=str_ireplace("--", "", $val);
-        $val=str_ireplace("^", "", $val);
-        $val=str_ireplace("[", "", $val);
-        $val=str_ireplace("]", "", $val);
-        $val=str_ireplace("==", "", $val);
-        $val=str_ireplace(";", "", $val);
-        return $val;
+    return $val;
+    
     }
 }

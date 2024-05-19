@@ -53,18 +53,26 @@
             </li>
           </ul>
           <?php
-            $content=$_GET['view'];
-            $WhiteList=["product","productlist","productinfo","provider","providerlist","providerinfo","category","categorylist","categoryinfo","admin","adminlist","order","bank","account"];
-            if(isset($content)){
-              if(in_array($content, $WhiteList) && is_file("./admin/".$content."-view.php")){
-                include "./admin/".$content."-view.php";
-              }else{
-                echo '<h2 class="text-center">Lo sentimos, la opción que ha seleccionado no se encuentra disponible</h2>';
-              }
-            }else{
-              echo '<h2 class="text-center">Para empezar, por favor escoja una opción del menú de administración</h2>';
-            }
-          ?>
+$content = $_GET['view'];
+$WhiteList = ["product", "productlist", "productinfo", "provider", "providerlist", "providerinfo", "category", "categorylist", "categoryinfo", "admin", "adminlist", "order", "bank", "account"];
+if (isset($content)) {
+    if (in_array($content, $WhiteList)) {
+        $htmlFile = "./admin/" . $content . "-view.html";
+        $phpFile = "./admin/" . $content . "-view.php";
+        if (is_file($htmlFile)) {
+            include $htmlFile;
+        } elseif (is_file($phpFile)) {
+            include $phpFile;
+        } else {
+            echo '<h2 class="text-center">Lo sentimos, la opción que ha seleccionado no se encuentra disponible</h2>';
+        }
+    } else {
+        echo '<h2 class="text-center">Lo sentimos, la opción que ha seleccionado no se encuentra disponible</h2>';
+    }
+} else {
+    echo '<h2 class="text-center">Para empezar, por favor escoja una opción del menú de administración</h2>';
+}
+?>
         </div>
     </section>
     <?php include './include/piedepagina.html'; ?>
