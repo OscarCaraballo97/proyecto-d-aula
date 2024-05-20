@@ -51,10 +51,20 @@
                 <i class="fa fa-address-card" aria-hidden="true"></i> &nbsp; Mi cuenta
               </a>
             </li>
+            <li>
+                <a href="configAdmin.php?view=client">
+                    <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Clientes
+                </a>
+                </li>
+            <li>
+                <a href="configAdmin.php?view=clientlist">
+                    <i class="fa fa-users" aria-hidden="true"></i> &nbsp; Lista de Clientes
+                </a>
+    </li>
           </ul>
           <?php
 $content = $_GET['view'];
-$WhiteList = ["product", "productlist", "productinfo", "provider", "providerlist", "providerinfo", "category", "categorylist", "categoryinfo", "admin", "adminlist", "order", "bank", "account"];
+$WhiteList = ["product", "productlist", "productinfo", "provider", "providerlist", "providerinfo", "category", "categorylist", "categoryinfo", "admin", "adminlist", "order", "bank", "account", "client", "clientlist"];
 if (isset($content)) {
     if (in_array($content, $WhiteList)) {
         $htmlFile = "./admin/" . $content . "-view.html";
