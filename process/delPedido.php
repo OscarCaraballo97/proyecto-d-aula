@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../Consulta/consultaSql.php';
+include '../Consulta/consultasSql.php';
 
 $NumPedidoDel=consultas::clean_string($_POST['num-pedido']);
 if(consultas::DeleteSQL('detalle', "NumPedido='".$NumPedidoDel."'") && consultas::DeleteSQL("venta", "NumPedido='".$NumPedidoDel."'")){
