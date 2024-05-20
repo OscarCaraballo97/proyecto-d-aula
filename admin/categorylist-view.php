@@ -1,3 +1,5 @@
+<?php
+?>
 
 <ul class="breadcrumb" style="margin-bottom: 5px;">
     <li>
@@ -55,7 +57,7 @@
 	                        		<a href="configAdmin.php?view=categoryinfo&code=<?php echo $cate['CodigoCat']; ?>" class="btn btn-raised btn-xs btn-success">Actualizar</a>
 	                        	</td>
 	                        	<td class="text-center">
-	                        		<form action="process/delcategori.php" method="POST" class="FormCatElec" data-form="delete">
+	                        		<form action="process/delcategoria.php" method="POST" class="FormCatElec" data-form="delete">
 	                        			<input type="hidden" name="categ-code" value="<?php echo $cate['CodigoCat']; ?>">
 	                        			<button type="submit" class="btn btn-raised btn-xs btn-danger">Eliminar</button>	
 	                        		</form>

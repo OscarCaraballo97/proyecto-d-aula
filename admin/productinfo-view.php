@@ -1,3 +1,5 @@
+<?php
+?>
 
 <ul class="breadcrumb" style="margin-bottom: 5px;">
     <li>
@@ -16,7 +18,7 @@
                 <h3 class="text-primary text-center">Actualizar datos del producto</h3>
                 <?php
                 	$code=$_GET['code'];
-                	$producto=ejecutarSQL::consultar("SELECT * FROM producto WHERE CodigoProd='$code'");
+                	$producto=ejecutar::consultar("SELECT * FROM producto WHERE CodigoProd='$code'");
                 	$prod=mysqli_fetch_array($producto, MYSQLI_ASSOC);
                 ?>
                 <form action="./process/updateProduct.php" method="POST" enctype="multipart/form-data" class="FormCatElec" data-form="update">
@@ -76,7 +78,7 @@
                                 <label>Categoría</label>
                                 <select class="form-control" name="prod-categoria">
                                     <?php
-                                        $categoria=ejecutarSQL::consultar("SELECT * FROM categoria");
+                                        $categoria=ejecutar::consultar("SELECT * FROM categoria");
                                         while($catec=mysqli_fetch_array($categoria, MYSQLI_ASSOC)){
                                         	if($prod['CodigoCat']==$catec['CodigoCat']){
                                             	echo '<option selected="" value="'.$catec['CodigoCat'].'">'.$catec['Nombre'].' (Actual)</option>';
@@ -93,7 +95,7 @@
                                 <label>Proveedor</label>
                                 <select class="form-control" name="prod-codigoP">
                                     <?php
-                                        $proveedor=ejecutarSQL::consultar("SELECT * FROM proveedor");
+                                        $proveedor=ejecutar::consultar("SELECT * FROM proveedor");
                                         while($prov=mysqli_fetch_array($proveedor, MYSQLI_ASSOC)){
                                         	if($prod['NITProveedor']==$prov['NITProveedor']){
                                         		echo '<option selected="" value="'.$prov['NITProveedor'].'">'.$prov['NombreProveedor'].' (Actual)</option>';

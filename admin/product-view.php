@@ -1,3 +1,6 @@
+<?php
+?>
+
 <ul class="breadcrumb" style="margin-bottom: 5px;">
     <li>
         <a href="configAdmin.php?view=product">
