@@ -1,3 +1,5 @@
+<?php
+?>
 
 <ul class="breadcrumb" style="margin-bottom: 5px;">
     <li>
