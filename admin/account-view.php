@@ -4,7 +4,7 @@
             <div class="container-form-admin">
                 <h3 class="text-info text-center">Actualizar cuenta</h3>
                 <?php
-                $admin = ejecutarSQL::consultar("SELECT * FROM administrador WHERE id='" . $_SESSION['adminID'] . "'");
+                $admin = ejecutar::consultar("SELECT * FROM administrador WHERE id='" . $_SESSION['adminID'] . "'");
                 $dataAdmin = mysqli_fetch_array($admin, MYSQLI_ASSOC);
                 ?>
                 <form action="./process/updateAdmin.php" method="POST" role="form" class="FormCatElec" data-form="update">
