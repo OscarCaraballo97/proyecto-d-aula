@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 14-05-2024 a las 11:23:07
+-- Tiempo de generación: 20-05-2024 a las 9:25:32
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `Market`
+-- Base de datos: `market`
 --
 
 -- --------------------------------------------------------
@@ -57,7 +57,8 @@ CREATE TABLE `categoria` (
 --
 
 INSERT INTO `categoria` (`CodigoCat`, `Nombre`, `Descripcion`) VALUES
-('789', 'Comida', 'aqui hay comida');
+('789', 'Comida', 'aqui hay comida'),
+('951', 'Pruebas', 'pruebas');
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`NIT`, `Nombre`, `NombreCompleto`, `Apellido`, `Clave`, `Direccion`, `Telefono`, `Email`) VALUES
-('1234', 'Oscar', 'Oscar', 'caraballo', '202cb962ac59075b964b07152d234b70', 'mi house', '6784705', 'oscar@gmail.com');
+('1234', 'Oscar', 'Oscar', 'caraballo', '202cb962ac59075b964b07152d234b70', 'mi house', '6784705', 'oscar@gmail.com'),
+('846', 'jeff', 'jefferson', 'arrieta', '202cb962ac59075b964b07152d234b70', 'su casa', '753214', 'jefferson@unicolombo.edu');
 
 -- --------------------------------------------------------
 
@@ -102,7 +104,7 @@ CREATE TABLE `cuentabanco` (
 --
 
 INSERT INTO `cuentabanco` (`id`, `NumeroCuenta`, `NombreBanco`, `NombreBeneficiario`, `TipoCuenta`) VALUES
-(1, '3143038350', 'Nequi', 'Tunometecabrasaramambiche', 'Cuanta de Ahorros');
+(1, '3143038350', 'Nequi', 'E-market', 'Cuanta de Ahorros');
 
 -- --------------------------------------------------------
 
@@ -122,10 +124,10 @@ CREATE TABLE `detalle` (
 --
 
 INSERT INTO `detalle` (`NumPedido`, `CodigoProd`, `CantidadProductos`, `PrecioProd`) VALUES
-(1, '456', 1, 2000.00),
 (2, '456', 1, 2000.00),
 (3, '456', 1, 2000.00),
-(4, '456', 1, 2000.00);
+(6, '4555', 1, 55555.00),
+(7, '456', 1, 2000.00);
 
 -- --------------------------------------------------------
 
@@ -154,8 +156,9 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id`, `CodigoProd`, `NombreProd`, `CodigoCat`, `Precio`, `Descuento`, `Modelo`, `Marca`, `Stock`, `NITProveedor`, `Imagen`, `Nombre`, `Estado`) VALUES
-(1, '456', 'Yuca', '789', 4000.00, 50, 'comida', 'Premium', 496, '123', '456.jpg', 'Oscar', 'Activo'),
-(2, '987', 'tunometecabrasaramambiche', '789', 50000.00, 0, 'premium', 'tumama', 700, '123', '987.png', 'Oscar', 'Activo');
+(1, '456', 'Yuca', '789', 4000.00, 50, 'comida', 'Premium', 494, '123', '456.jpg', 'Oscar', 'Activo'),
+(2, '987', 'tunometecabrasaramambiche', '789', 50000.00, 0, 'premium', 'tumama', 700, '123', '987.png', 'Oscar', 'Activo'),
+(4, '4555', 'prueba1', '951', 55555.00, 0, 'premium', 'prueba1', 0, '123', '4555.png', 'oscar', 'Activo');
 
 -- --------------------------------------------------------
 
@@ -200,10 +203,10 @@ CREATE TABLE `venta` (
 --
 
 INSERT INTO `venta` (`NumPedido`, `Fecha`, `NIT`, `TotalPagar`, `Estado`, `NumeroDeposito`, `TipoEnvio`, `Adjunto`) VALUES
-(1, '13-05-2024', '1234', 2000.00, 'Entregado', '123456', 'Envio Por Currier', 'Sin archivo adjunto'),
 (2, '13-05-2024', '1234', 2000.00, 'Cancelado', 'asd', 'Recoger Por Tienda', 'Sin archivo adjunto'),
 (3, '13-05-2024', '1234', 2000.00, 'Pendiente', '123456', 'Recoger Por Tienda', 'comprobante_3.png'),
-(4, '14-05-2024', '1234', 2000.00, 'Pendiente', '789', 'Envio Por Currier', 'comprobante_4.jpg');
+(6, '20-05-2024', '1234', 55555.00, 'Pendiente', '123456', 'Recoger Por Tienda', 'comprobante_6.png'),
+(7, '20-05-2024', '846', 2000.00, 'Pendiente', '6516161', 'Recoger Por Tienda', 'comprobante_4.png');
 
 --
 -- Índices para tablas volcadas
@@ -271,7 +274,7 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `cuentabanco`
@@ -283,13 +286,13 @@ ALTER TABLE `cuentabanco`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `NumPedido` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `NumPedido` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
