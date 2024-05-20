@@ -60,7 +60,7 @@
                                     <td class="text-center"><?php echo $prod['NombreProd']; ?></td>
                                     <td class="text-center">
                                         <?php
-                                        $categ = ejecutarSQL::consultar("SELECT Nombre FROM categoria WHERE CodigoCat='" . $prod['CodigoCat'] . "'");
+                                        $categ = ejecutar::consultar("SELECT Nombre FROM categoria WHERE CodigoCat='" . $prod['CodigoCat'] . "'");
                                         $datc = mysqli_fetch_array($categ, MYSQLI_ASSOC);
                                         echo $datc['Nombre'];
                                         ?>
@@ -71,7 +71,7 @@
                                     <td class="text-center"><?php echo $prod['Stock']; ?></td>
                                     <td class="text-center">
                                         <?php
-                                        $prov = ejecutarSQL::consultar("SELECT NombreProveedor FROM proveedor WHERE NITProveedor='" . $prod['NITProveedor'] . "'");
+                                        $prov = ejecutar::consultar("SELECT NombreProveedor FROM proveedor WHERE NITProveedor='" . $prod['NITProveedor'] . "'");
                                         $datp = mysqli_fetch_array($prov, MYSQLI_ASSOC);
                                         echo $datp['NombreProveedor'];
                                         ?>
