@@ -132,8 +132,8 @@ if(!empty($_SESSION['carro'])){
                                                   break;
                                               }
                                             ?>
-                                            </td>
                                             <td><?php echo $rw['TipoEnvio']; ?></td>
+                                            <td><a href="./report/factura.php?id=<?php echo $order['NumPedido'];  ?>" class="btn btn-raised btn-xs btn-primary btn-block" target="_blank">Imprimir Recibo</a></td>
                                         </tr>
                                     <?php
                                     }
